@@ -47,6 +47,7 @@ namespace Tftp.Net
                 case Data.OpCode:
                     return ParseData(reader);
 
+                case 22783: // linux nc ack
                 case Acknowledgement.OpCode:
                     return ParseAcknowledgement(reader);
 
@@ -57,7 +58,7 @@ namespace Tftp.Net
                     return ParseOptionAcknowledgement(reader);
 
                 default:
-                    throw new TftpParserException("Invalid opcode");
+                    throw new TftpParserException($"Invalid opcode: {opcode}");
             }
         }
 

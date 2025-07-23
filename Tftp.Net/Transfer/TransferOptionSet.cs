@@ -9,7 +9,7 @@ namespace Tftp.Net.Transfer
     class TransferOptionSet
     {
         public const int DEFAULT_BLOCKSIZE = 512;
-        public const int DEFAULT_TIMEOUT_SECS = 5;
+        public const int DEFAULT_TIMEOUT_SECS = 15;
 
         public bool IncludesBlockSizeOption = false;
         public int BlockSize = DEFAULT_BLOCKSIZE;

@@ -50,7 +50,8 @@ namespace Tftp.Net
 
         /// <summary>
         /// Timeout after which commands are sent again.
-        /// This member is also transmitted as the TFTP timeout interval option (RFC 2349).
+        /// This member is also transmitted as the TFTP timeout interval option (RFC 2349). <br />
+        /// Only for outgoing transfers
         /// </summary>
         TimeSpan RetryTimeout { get; set; }
 
